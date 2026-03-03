@@ -1,26 +1,26 @@
-# Upload-server (GitHub Pages verzia)
+# Upload-server (web stránka)
 
-Tento projekt je upravený tak, aby fungoval na **GitHub Pages** ako statická web stránka.
+Tento projekt je hotová **web stránka** použiteľná na **GitHub Pages**.
 
-## Dôležité
+## Ako to funguje
 
-GitHub Pages nepodporuje Python backend (`server.py`), preto:
+- hlavná stránka je `index.html`,
+- prihlásenie je cez kľúč `T4B-Q7L`,
+- po prihlásení sa zobrazí profil `Profil 1` a číslo `071`,
+- môžeš nahrať súbor + pridať popis,
+- súbor sa uloží v prehliadači (localStorage),
+- vieš ho zo zoznamu stiahnuť alebo zmazať,
+- je dostupné odhlásenie.
 
-- prihlasovanie funguje v prehliadači,
-- nahraté súbory sa ukladajú do **localStorage** (lokálne v tvojom prehliadači),
-- súbory nie sú zdieľané medzi používateľmi ani zariadeniami.
+> Poznámka: GitHub Pages nepodporuje Python backend, preto je logika v JavaScripte.
 
-## Hlavná stránka
+## Súbory
 
-- `index.html` (to je vstupná stránka pre GitHub Pages)
+- `index.html` – štruktúra stránky,
+- `styles.css` – dizajn,
+- `app.js` – logika prihlasovania, uploadu a zoznamu.
 
-## Prihlásenie
-
-- Prístupový kľúč: `T4B-Q7L`
-- Profil: `Profil 1`
-- Číslo v hornom rohu po prihlásení: `071`
-
-## Lokálne spustenie (ako statický web)
+## Lokálne spustenie
 
 ```bash
 python3 -m http.server 8080
@@ -29,9 +29,3 @@ python3 -m http.server 8080
 Potom otvor:
 
 - `http://localhost:8080/index.html`
-
-## Súbory
-
-- `index.html` – UI stránky,
-- `styles.css` – štýly,
-- `app.js` – logika prihlasovania, uploadu a zoznamu súborov.

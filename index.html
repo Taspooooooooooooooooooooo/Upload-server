@@ -1,50 +1,48 @@
 <!doctype html>
 <html lang="sk">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Upload server - GitHub Pages</title>
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nahrávanie súborov</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <main id="loginView" class="card">
-    <h1>Prihlásenie cez prístupový kľúč</h1>
+  <header class="topbar hidden" id="topbar">
+    <span class="profile-number" id="profileNumber">071</span>
+    <button id="logoutBtn" class="link-btn" type="button">Odhlásiť sa</button>
+  </header>
+
+  <main class="card" id="loginView">
+    <h1>Prihlásenie</h1>
     <p>Zadajte prístupový kľúč pre otvorenie profilu.</p>
     <div id="loginMessage"></div>
     <form id="loginForm">
       <label for="accessKey">Prístupový kľúč</label>
-      <input id="accessKey" type="text" required placeholder="napr. T4B-Q7L">
+      <input id="accessKey" type="text" required autocomplete="off" placeholder="T4B-Q7L" />
       <button type="submit">Prihlásiť sa</button>
     </form>
   </main>
 
-  <div id="profileView" class="hidden">
-    <header class="topbar">
-      <span id="profileNumber" class="profile-number">071</span>
-      <button id="logoutBtn" class="link-btn">Odhlásiť sa</button>
-    </header>
+  <main class="card hidden" id="profileView">
+    <h1 id="profileName">Profil 1</h1>
+    <div id="profileMessage"></div>
 
-    <main class="card">
-      <h1 id="profileName">Profil 1</h1>
-      <div id="profileMessage"></div>
+    <form id="uploadForm">
+      <label for="fileInput">Nahrať súbor</label>
+      <input id="fileInput" type="file" required />
 
-      <form id="uploadForm">
-        <label for="fileInput">Nahrať súbor</label>
-        <input id="fileInput" type="file" required>
+      <label for="descriptionInput">Popis</label>
+      <textarea id="descriptionInput" rows="4" required></textarea>
 
-        <label for="descriptionInput">Popis</label>
-        <textarea id="descriptionInput" rows="4" required></textarea>
+      <button type="submit">Odoslať</button>
+      <p class="hint">Súbory sa ukladajú lokálne v prehliadači (GitHub Pages bez servera).</p>
+    </form>
 
-        <button type="submit">Odoslať</button>
-        <p class="hint">Na GitHub Pages sa súbory ukladajú lokálne do prehliadača (localStorage).</p>
-      </form>
-
-      <section class="downloads">
-        <h2>Nahrané súbory</h2>
-        <ul id="fileList"></ul>
-      </section>
-    </main>
-  </div>
+    <section class="downloads">
+      <h2>Uložené súbory</h2>
+      <ul id="fileList"></ul>
+    </section>
+  </main>
 
   <script src="app.js"></script>
 </body>

@@ -1,15 +1,57 @@
-:root { font-family: Arial, sans-serif; color: #131313; }
+:root {
+  font-family: Arial, sans-serif;
+  color: #131313;
+}
+
 * { box-sizing: border-box; }
 body { margin: 0; background: #eef2f7; }
 .hidden { display: none; }
-.topbar { display: flex; justify-content: space-between; align-items: center; padding: 16px 24px; }
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 24px;
+}
+
 .profile-number { font-size: 26px; font-weight: 700; }
-.card { max-width: 640px; margin: 36px auto; background: #fff; border-radius: 12px; padding: 24px; box-shadow: 0 8px 22px rgba(0,0,0,.09); }
+
+.card {
+  max-width: 700px;
+  margin: 24px auto;
+  background: #fff;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 8px 22px rgba(0,0,0,.09);
+}
+
 h1 { margin-top: 0; }
 form { display: flex; flex-direction: column; gap: 10px; }
 input, textarea, button { font: inherit; padding: 10px; }
-button { background: #0b57d0; color: #fff; border: none; border-radius: 8px; cursor: pointer; }
-.link-btn { background: none; color: #0b57d0; padding: 0; }
-.messages { background: #fff9df; border: 1px solid #f3db86; border-radius: 8px; padding: 10px 14px; margin: 0 0 12px; }
+
+button {
+  background: #0b57d0;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.link-btn {
+  background: none;
+  color: #0b57d0;
+  padding: 0;
+}
+
+.messages {
+  background: #fff9df;
+  border: 1px solid #f3db86;
+  border-radius: 8px;
+  padding: 10px 14px;
+  margin: 0 0 12px;
+}
+
 .downloads ul { padding-left: 18px; }
+.downloads li { margin-bottom: 8px; }
+.danger-btn { margin-left: 10px; background: #ce2f2f; }
 .hint { color: #5a5a5a; font-size: 14px; }
